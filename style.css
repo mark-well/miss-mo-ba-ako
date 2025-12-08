@@ -1,0 +1,129 @@
+:root {
+    --primary: #F29AAE;
+    --secondary: #7132CA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    background-image: linear-gradient(to right top, #f29aae, #f08eb6, #e984c3, #db7ed2, #c47be4);
+}
+
+.icon {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.buttons {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+button {
+    color: #ffffff;
+    background-color: var(--secondary);
+    outline: transparent;
+    border: none;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 6px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+/* PARTICLES */
+.particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    animation: pulse 0.3s linear 1;
+    display: none;
+    animation: spin 3s linear infinite;
+}
+
+.heart1 {
+    rotate: 9deg;
+    top: 40%;
+    left: 80%;
+}
+.heart2 {
+    rotate: -45deg;
+    top: 80%;
+    left: 20%;
+}
+.star1 {
+    rotate: 5deg;
+    top: 75%;
+    left: 70%;
+}
+.star2 {
+    rotate: -6deg;
+    top: 10%;
+    left: 4%;
+}
+
+.scale-animation {
+  animation: shake 0.5s; /* Apply the shake animation for 0.5 seconds */
+}
+
+@keyframes shake {
+  0% { scale: 1; }
+  50% {  scale: 1.1; }
+  100% {  scale: 1; }
+}
+
+@keyframes pulse{
+  25%  {transform: scale(1);}
+  75%  {transform: scale(1.2);}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees rotation */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees rotation */
+  }
+}
+
+/* CONFETTI */
+@keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), 0 0 60px rgba(0, 0, 255, 0.8); }
+    50% { box-shadow: 0 0 50px rgba(255, 0, 0, 1), 0 0 100px rgba(0, 0, 255, 1); }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+}
