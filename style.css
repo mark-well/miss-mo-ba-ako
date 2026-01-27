@@ -1,6 +1,7 @@
 :root {
     --primary: #F29AAE;
     --secondary: #7132CA;
+    --background: rgb(252, 248, 248);
 }
 
 * {
@@ -16,114 +17,70 @@
 body {
     width: 100vw;
     height: 100dvh;
-    background-image: linear-gradient(to right top, #f29aae, #f08eb6, #e984c3, #db7ed2, #c47be4);
+    background-color: var(--background);
+    padding: 1rem;
 }
 
-.icon {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-    display: block;
-    margin: 0 auto;
-    margin-top: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-h1 {
-    color: #ffffff;
+.last-update {
+    color: hsl(0, 0%, 20%);
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 0.75rem;
 }
 
-.buttons {
-    width: 100%;
-    margin-top: 4rem;
+.content-1 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
 }
 
-button {
-    color: #ffffff;
-    background-color: var(--secondary);
-    outline: transparent;
-    border: none;
-    width: 7rem;
-    height: 3rem;
-    border-radius: 6px;
-    position: absolute;
-    transition: all 0.5s ease-in-out;
-    transform-origin: 50% 50%;
+.content-1 p {
+    text-align: justify;
+    font-size: 1rem;
+    max-width: 750px;
 }
 
-/* PARTICLES */
-.particle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    animation: pulse 0.3s linear 1;
-    display: none;
-    animation: spin 3s linear infinite;
+.music-lyric {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    font-size: 1rem;
+    gap: 0.5rem;
 }
 
-.heart1 {
-    rotate: 9deg;
-    top: 40%;
-    left: 80%;
-}
-.heart2 {
-    rotate: -45deg;
-    top: 80%;
-    left: 20%;
-}
-.star1 {
-    rotate: 5deg;
-    top: 75%;
-    left: 70%;
-}
-.star2 {
-    rotate: -6deg;
-    top: 10%;
-    left: 4%;
+.lyric-container {
+    background-color: #ffffff;
+    padding: 1rem;
+    color: hsl(0, 0%, 20%);
+    border: 0.5px solid hsl(0, 0%, 80%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 2px;
+    filter: blur(0.8px);
+    /* max-width: 750px; */
+    box-shadow: 0 4px 8px 0px hsla(0, 0%, 0%, 15%);
 }
 
-.scale-animation {
-  animation: shake 0.5s; /* Apply the shake animation for 0.5 seconds */
+.song-metadata {
+    display: flex;
+    gap: 0.5rem;
 }
 
-@keyframes shake {
-  0% { scale: 1; }
-  50% {  scale: 1.1; }
-  100% {  scale: 1; }
+.album-cover {
+    box-shadow: 0 4px 8px 0px hsla(0, 0%, 0%, 15%);
 }
 
-@keyframes pulse{
-  25%  {transform: scale(1);}
-  75%  {transform: scale(1.2);}
+.song-title {
+    font-size: 1rem;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); /* Start at 0 degrees rotation */
-  }
-  100% {
-    transform: rotate(360deg); /* End at 360 degrees rotation */
-  }
+.song-artist {
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 30%);
 }
 
-/* CONFETTI */
-@keyframes rainbowShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes glow {
-    0%, 100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), 0 0 60px rgba(0, 0, 255, 0.8); }
-    50% { box-shadow: 0 0 50px rgba(255, 0, 0, 1), 0 0 100px rgba(0, 0, 255, 1); }
-}
-
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    pointer-events: none;
-}
+@media (width < 64rem) {}
