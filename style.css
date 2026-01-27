@@ -40,7 +40,6 @@ body {
 .content-1 p {
     text-align: justify;
     font-size: 1rem;
-    max-width: 750px;
 }
 
 .music-lyric {
@@ -63,7 +62,6 @@ body {
     border-radius: 2px;
     filter: blur(0.8px);
     /* max-width: 750px; */
-    min-width: 350px;
     box-shadow: 0 4px 8px 0px hsla(0, 0%, 0%, 15%);
 }
 
