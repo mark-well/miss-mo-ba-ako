@@ -40,6 +40,8 @@ body {
 .content-1 p {
     text-align: justify;
     font-size: 1rem;
+    text-indent: 2rem;
+    max-width: 600px;
 }
 
 .music-lyric {
