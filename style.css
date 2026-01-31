@@ -88,4 +88,30 @@ body {
     color: hsl(0, 0%, 30%);
 }
 
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6000px;
+}
+
+.arrow-container>i {
+    color: #e8e8e8;
+}
+
+.photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.photo-container>img {
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px 0px hsla(0, 0%, 0%, 15%);
+    border-radius: 4px;
+}
+
 @media (width < 64rem) {}
