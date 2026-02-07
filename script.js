@@ -1,0 +1,1 @@
+window.location.replace("https://website-for-her-lemon.vercel.app/")
